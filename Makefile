@@ -1,11 +1,10 @@
 SCRIPT= martinesay.sh
-MAN= martinesay.1
+PROG= ${SCRIPT:R}
 
-BINDIR?= bin
-DESTDIR?= /usr/local/
+BINDIR?= /usr/local/bin
 
-install:
+install: maninstall
 	${INSTALL} ${INSTALL_COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} \
-		${.CURDIR}/${SCRIPT} ${DESTDIR}${BINDIR}/martinesay
+		${.CURDIR}/${SCRIPT} ${BINDIR}/${PROG}
 
 .include <bsd.prog.mk>
