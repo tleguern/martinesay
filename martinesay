@@ -8,14 +8,13 @@ readonly PROGNAME="`basename $0`"
 readonly VERSION='v1.0'
 
 usage() {
-        echo "usage: $PROGNAME [-d] string"
+        echo "usage: $PROGNAME string"
 }
 
 say=""
 
-while getopts ":d" opt;do
+while getopts ":" opt;do
 	case $opt in
-		d) set -x;;
 		:) echo "$PROGNAME: option requires an argument -- $OPTARG";
 		   usage; exit 1;;	# NOTREACHED
 		?) echo "$PROGNAME: unkown option -- $OPTARG";
