@@ -1,5 +1,5 @@
 #!/bin/sh
-#
+# Tristan Le Guern <tleguern@bouledef.eu>
 # This file is placed in the public domain.
 
 set -e
