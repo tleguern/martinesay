@@ -4,7 +4,7 @@
 
 set -e
 
-readonly PROGNAME="`basename $0`"
+readonly PROGNAME="$(basename $0)"
 readonly VERSION='v1.0'
 
 usage() {
