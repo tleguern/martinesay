@@ -15,9 +15,9 @@ say=""
 
 while getopts ":" opt;do
 	case $opt in
-		:) echo "$PROGNAME: option requires an argument -- $OPTARG";
+		:) echo "$PROGNAME: option requires an argument -- $OPTARG" >&2;
 		   usage; exit 1;;	# NOTREACHED
-		\?) echo "$PROGNAME: unkown option -- $OPTARG";
+		\?) echo "$PROGNAME: unkown option -- $OPTARG" >&2;
 		   usage; exit 1;;	# NOTREACHED
 		*) usage; exit 1;;	# NOTREACHED
 	esac
@@ -25,7 +25,7 @@ done
 shift $(( $OPTIND -1 ))
 
 if [ -z "$1" ]; then
-	echo "$PROGNAME: stuff expected"
+	echo "$PROGNAME: stuff expected" >&2
 	usage
 	exit 1
 else
@@ -35,7 +35,7 @@ fi
 set -u
 
 if [ ${#say} -ge 70 ]; then
-	echo Martine thinks this is complicated
+	echo Martine thinks this is complicated >&2
 	exit 1
 fi
 
