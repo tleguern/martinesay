@@ -1,7 +1,10 @@
 PROG= martinesay
 SRCS= martinesay.sh
 
-BINDIR?= /usr/local/bin
-INSTALL_STRIP=
+.SUFFIXES: .sh
 
-.include <bsd.prog.mk>
+.sh:
+	cp $< $@
+	chmod +x $@
+
+martinesay: martinesay.sh
