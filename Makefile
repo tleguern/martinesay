@@ -23,3 +23,6 @@ install:
 	mkdir -p ${DESTDIR}${MANDIR}/man1
 	${INSTALL_PROGRAM} ${PROG} ${DESTDIR}${BINDIR}
 	${INSTALL_MAN} ${PROG}.1 ${DESTDIR}${MANDIR}/man1
+
+clean:
+	rm -r -- ${PROG}
