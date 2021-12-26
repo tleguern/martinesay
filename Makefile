@@ -25,4 +25,4 @@ install:
 	${INSTALL_MAN} ${PROG}.1 ${DESTDIR}${MANDIR}/man1
 
 clean:
-	rm -r -- ${PROG}
+	rm -f -- ${PROG}
