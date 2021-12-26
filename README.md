@@ -28,7 +28,7 @@ To install globally:
 
 To install in your `$HOME/bin`:
 
-   $ DESTDIR=~/ make install
+    $ DESTDIR=~/ make install
 
 ## License
 
