@@ -1,29 +1,35 @@
-MARTINESAY(1) - General Commands Manual
+# martinesay
 
-# NAME
+Non-configurable thinking jellyfish (and no more).
 
-**martinesay** - non-configurable thinking jellyfish (and no more)
+## Contents
 
-# SYNOPSIS
+1. [Synopsis](#synopsis)
+2. [Install](#install)
+3. [License](#license)
 
-**martinesay**
-*say*
+## Synopsis
 
-# DESCRIPTION
+    martinesay something
 
-The
-**martinesay**
-utility prints an ASCII picture of a jellyfish thinking something provided by
-the user. Jellyfishes are somewhat limited, so complicated thought will be
-rejected.
-This jellyfish is named Martine and she lives on the Internet. She
-haunts various places but you can, for sure, find her here:
-http://medu.se.
-If you are not from Normandy and thus only like cows then you probably like
-Martine.
+The **martinesay** utility prints an ASCII picture of a jellyfish thinking _something_.
+Jellyfishes are somewhat limited, so complicated thought will be rejected.
+This specific jellyfish is named Martine and she lives on the Internet.
+You might actually find her in various places.
 
-# SEE ALSO
+People from Normandy will probably prefer `cowsay`.
 
-cowsay(1)
+## Install
 
-Linux 4.9.0-3-amd64 - September 26, 2017
+To install globally:
+
+    $ make
+    # make install
+
+To install in your `$HOME/bin`:
+
+   $ DESTDIR=~/ make install
+
+## License
+
+This code is public domain.

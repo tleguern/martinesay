@@ -14,7 +14,7 @@ MANDIR?=man
 	chmod +x $@
 
 .1.md:
-	mandoc -T markdown $@ > $<
+	mandoc -T markdown $< > $@
 
 ${PROG}: ${PROG}.sh
 
